@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,310 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Bsh-DB-ps8">
+                                <rect key="frame" x="15" y="296" width="345" height="330"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="6is-OX-oLV">
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="75"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GtX-QM-JOY">
+                                                <rect key="frame" x="0.0" y="1" width="75" height="73.666666666666671"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="GtX-QM-JOY" secondAttribute="height" multiplier="1:1" id="YGq-dB-yjl"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <color key="tintColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" backgroundImage="c.circle.fill" catalog="system">
+                                                    <color key="titleColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fmh-7z-d48">
+                                                <rect key="frame" x="90" y="1" width="75" height="73.666666666666671"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Fmh-7z-d48" secondAttribute="height" multiplier="1:1" id="kwE-z7-Y9f"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <color key="tintColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" backgroundImage="plusminus.circle.fill" catalog="system">
+                                                    <color key="titleColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BNX-an-4bk">
+                                                <rect key="frame" x="180" y="1" width="75" height="73.666666666666671"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="BNX-an-4bk" secondAttribute="height" multiplier="1:1" id="Cas-Mn-aGh"/>
+                                                </constraints>
+                                                <color key="tintColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" image="percent" catalog="system" backgroundImage="circle.fill">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gxo-4P-6IZ">
+                                                <rect key="frame" x="270" y="1" width="75" height="73.666666666666671"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Gxo-4P-6IZ" secondAttribute="height" multiplier="1:1" id="h40-NQ-MYM"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" backgroundImage="divide.circle.fill" catalog="system">
+                                                    <color key="titleColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Fmh-7z-d48" firstAttribute="width" secondItem="Fmh-7z-d48" secondAttribute="height" multiplier="1:1" id="0OX-0S-am7"/>
+                                            <constraint firstItem="BNX-an-4bk" firstAttribute="width" secondItem="BNX-an-4bk" secondAttribute="height" multiplier="1:1" id="FkK-AL-qLu"/>
+                                            <constraint firstItem="Gxo-4P-6IZ" firstAttribute="width" secondItem="Gxo-4P-6IZ" secondAttribute="height" multiplier="1:1" id="j01-ci-5rC"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="w7N-cT-LBe">
+                                        <rect key="frame" x="0.0" y="85" width="345" height="75"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3c9-eg-Eh5">
+                                                <rect key="frame" x="0.0" y="1" width="75" height="73.666666666666671"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="3c9-eg-Eh5" secondAttribute="height" multiplier="1:1" id="dwC-QW-2AQ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <color key="tintColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" backgroundImage="7.circle.fill" catalog="system">
+                                                    <color key="titleColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pD2-SS-mj5">
+                                                <rect key="frame" x="90" y="1" width="75" height="73.666666666666671"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="pD2-SS-mj5" secondAttribute="height" multiplier="1:1" id="Blx-xk-wL6"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <color key="tintColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" backgroundImage="8.circle.fill" catalog="system">
+                                                    <color key="titleColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KH6-Ad-Uar">
+                                                <rect key="frame" x="180" y="1" width="75" height="73.666666666666671"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="KH6-Ad-Uar" secondAttribute="height" multiplier="1:1" id="M8c-yr-5L5"/>
+                                                </constraints>
+                                                <color key="tintColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" image="percent" catalog="system" backgroundImage="9.circle.fill">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cfa-le-hc0">
+                                                <rect key="frame" x="270" y="1" width="75" height="73.666666666666671"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Cfa-le-hc0" secondAttribute="height" multiplier="1:1" id="zKZ-Fd-Ilo"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" backgroundImage="multiply.circle.fill" catalog="system">
+                                                    <color key="titleColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="pD2-SS-mj5" firstAttribute="width" secondItem="pD2-SS-mj5" secondAttribute="height" multiplier="1:1" id="I4t-hp-J8h"/>
+                                            <constraint firstItem="KH6-Ad-Uar" firstAttribute="width" secondItem="KH6-Ad-Uar" secondAttribute="height" multiplier="1:1" id="U2q-1P-xBE"/>
+                                            <constraint firstItem="Cfa-le-hc0" firstAttribute="width" secondItem="Cfa-le-hc0" secondAttribute="height" multiplier="1:1" id="cng-gp-EJL"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="DQI-ez-GJX">
+                                        <rect key="frame" x="0.0" y="170" width="345" height="75"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wG3-O0-DeO">
+                                                <rect key="frame" x="0.0" y="1" width="75" height="73.666666666666671"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="wG3-O0-DeO" secondAttribute="height" multiplier="1:1" id="Hp1-iz-gWt"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <color key="tintColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" backgroundImage="4.circle.fill" catalog="system">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="inu-ZZ-2Lc">
+                                                <rect key="frame" x="90" y="1" width="75" height="73.666666666666671"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="inu-ZZ-2Lc" secondAttribute="height" multiplier="1:1" id="BUY-it-xQT"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <color key="tintColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" backgroundImage="5.circle.fill" catalog="system">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wnq-mo-3vT">
+                                                <rect key="frame" x="180" y="1" width="75" height="73.666666666666671"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="wnq-mo-3vT" secondAttribute="height" multiplier="1:1" id="XIe-iy-2ip"/>
+                                                </constraints>
+                                                <color key="tintColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" image="percent" catalog="system" backgroundImage="6.circle.fill">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LEG-TX-aO7">
+                                                <rect key="frame" x="270" y="1" width="75" height="73.666666666666671"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="LEG-TX-aO7" secondAttribute="height" multiplier="1:1" id="EHq-fS-RYG"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" backgroundImage="minus.circle.fill" catalog="system">
+                                                    <color key="titleColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="inu-ZZ-2Lc" firstAttribute="width" secondItem="inu-ZZ-2Lc" secondAttribute="height" multiplier="1:1" id="MFE-wt-XgM"/>
+                                            <constraint firstItem="LEG-TX-aO7" firstAttribute="width" secondItem="LEG-TX-aO7" secondAttribute="height" multiplier="1:1" id="pWm-D0-2YT"/>
+                                            <constraint firstItem="wnq-mo-3vT" firstAttribute="width" secondItem="wnq-mo-3vT" secondAttribute="height" multiplier="1:1" id="yvP-ke-6Af"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="lOA-0T-5wy">
+                                        <rect key="frame" x="0.0" y="255" width="345" height="75"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TA5-uh-oLL">
+                                                <rect key="frame" x="0.0" y="1" width="75" height="73.666666666666671"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="TA5-uh-oLL" secondAttribute="height" multiplier="1:1" id="kbV-zN-ZUd"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <color key="tintColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" backgroundImage="1.circle.fill" catalog="system">
+                                                    <color key="titleColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OSR-ap-2bK">
+                                                <rect key="frame" x="90" y="1" width="75" height="73.666666666666671"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="OSR-ap-2bK" secondAttribute="height" multiplier="1:1" id="eBz-wJ-4tF"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <color key="tintColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" backgroundImage="2.circle.fill" catalog="system">
+                                                    <color key="titleColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hE-7s-Pel">
+                                                <rect key="frame" x="180" y="1" width="75" height="73.666666666666671"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="2hE-7s-Pel" secondAttribute="height" multiplier="1:1" id="bRF-iW-FoQ"/>
+                                                </constraints>
+                                                <color key="tintColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" image="percent" catalog="system" backgroundImage="3.circle.fill">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fgB-he-qZs">
+                                                <rect key="frame" x="270" y="1" width="75" height="73.666666666666671"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="fgB-he-qZs" secondAttribute="height" multiplier="1:1" id="VVm-j0-VUK"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" backgroundImage="plus.circle.fill" catalog="system">
+                                                    <color key="titleColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="fgB-he-qZs" firstAttribute="width" secondItem="fgB-he-qZs" secondAttribute="height" multiplier="1:1" id="9Df-kS-bah"/>
+                                            <constraint firstItem="OSR-ap-2bK" firstAttribute="width" secondItem="OSR-ap-2bK" secondAttribute="height" multiplier="1:1" id="GMy-10-XKe"/>
+                                            <constraint firstItem="2hE-7s-Pel" firstAttribute="width" secondItem="2hE-7s-Pel" secondAttribute="height" multiplier="1:1" id="k0X-mL-0W9"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P7R-ol-Fru">
+                                <rect key="frame" x="14.999999999999996" y="668" width="56.666666666666664" height="28.333333333333332"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ax0-dl-jmI">
+                                        <rect key="frame" x="0.0" y="0.99999999999999822" width="28.333333333333332" height="27"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="ax0-dl-jmI" secondAttribute="height" multiplier="1:1" id="kc9-Et-0sr"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <color key="tintColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" backgroundImage="1.circle.fill" catalog="system">
+                                            <color key="titleColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0XR-Ui-8Pr">
+                                        <rect key="frame" x="28.333333333333336" y="0.99999999999999822" width="28.333333333333336" height="27"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="0XR-Ui-8Pr" secondAttribute="height" multiplier="1:1" id="029-YH-haL"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" backgroundImage="plus.circle.fill" catalog="system">
+                                            <color key="titleColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="97l-AN-Et6">
+                                <rect key="frame" x="16" y="134" width="165" height="73.666666666666657"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Bsh-DB-ps8" secondAttribute="trailing" constant="15" id="2nn-1p-0ni"/>
+                            <constraint firstItem="Bsh-DB-ps8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="n96-jh-A5d"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="138.40000000000001" y="117.48768472906404"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="1.circle.fill" catalog="system" width="64" height="60"/>
+        <image name="2.circle.fill" catalog="system" width="64" height="60"/>
+        <image name="3.circle.fill" catalog="system" width="64" height="60"/>
+        <image name="4.circle.fill" catalog="system" width="64" height="60"/>
+        <image name="5.circle.fill" catalog="system" width="64" height="60"/>
+        <image name="6.circle.fill" catalog="system" width="64" height="60"/>
+        <image name="7.circle.fill" catalog="system" width="64" height="60"/>
+        <image name="8.circle.fill" catalog="system" width="64" height="60"/>
+        <image name="9.circle.fill" catalog="system" width="64" height="60"/>
+        <image name="c.circle.fill" catalog="system" width="64" height="60"/>
+        <image name="circle.fill" catalog="system" width="64" height="60"/>
+        <image name="divide.circle.fill" catalog="system" width="64" height="60"/>
+        <image name="minus.circle.fill" catalog="system" width="64" height="60"/>
+        <image name="multiply.circle.fill" catalog="system" width="64" height="60"/>
+        <image name="percent" catalog="system" width="64" height="58"/>
+        <image name="plus.circle.fill" catalog="system" width="64" height="60"/>
+        <image name="plusminus.circle.fill" catalog="system" width="64" height="60"/>
+    </resources>
 </document>
