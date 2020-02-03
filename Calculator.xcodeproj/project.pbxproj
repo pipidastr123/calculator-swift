@@ -14,7 +14,7 @@
 		75D0FE5123E610F4009A65A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75D0FE5023E610F4009A65A0 /* Assets.xcassets */; };
 		75D0FE5423E610F4009A65A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75D0FE5223E610F4009A65A0 /* LaunchScreen.storyboard */; };
 		75D0FE5F23E610F5009A65A0 /* CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D0FE5E23E610F5009A65A0 /* CalculatorTests.swift */; };
-		75D0FE6A23E617EB009A65A0 /* NewButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D0FE6923E617EB009A65A0 /* NewButtons.swift */; };
+		75D0FE6A23E617EB009A65A0 /* RoundedButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D0FE6923E617EB009A65A0 /* RoundedButtons.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +39,7 @@
 		75D0FE5A23E610F5009A65A0 /* CalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		75D0FE5E23E610F5009A65A0 /* CalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorTests.swift; sourceTree = "<group>"; };
 		75D0FE6023E610F5009A65A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		75D0FE6923E617EB009A65A0 /* NewButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewButtons.swift; sourceTree = "<group>"; };
+		75D0FE6923E617EB009A65A0 /* RoundedButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButtons.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +85,7 @@
 				75D0FE4923E610EF009A65A0 /* SceneDelegate.swift */,
 				75D0FE4B23E610EF009A65A0 /* ViewController.swift */,
 				75D0FE4D23E610EF009A65A0 /* Main.storyboard */,
-				75D0FE6923E617EB009A65A0 /* NewButtons.swift */,
+				75D0FE6923E617EB009A65A0 /* RoundedButtons.swift */,
 				75D0FE5023E610F4009A65A0 /* Assets.xcassets */,
 				75D0FE5223E610F4009A65A0 /* LaunchScreen.storyboard */,
 				75D0FE5523E610F4009A65A0 /* Info.plist */,
@@ -203,7 +203,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75D0FE6A23E617EB009A65A0 /* NewButtons.swift in Sources */,
+				75D0FE6A23E617EB009A65A0 /* RoundedButtons.swift in Sources */,
 				75D0FE4C23E610EF009A65A0 /* ViewController.swift in Sources */,
 				75D0FE4823E610EF009A65A0 /* AppDelegate.swift in Sources */,
 				75D0FE4A23E610EF009A65A0 /* SceneDelegate.swift in Sources */,
