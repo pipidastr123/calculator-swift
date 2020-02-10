@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
-    varvar calcModel: Calculations?
+    var calcModel = Calculations("")
     
     
     //MARK: Outlets
@@ -32,10 +32,12 @@ class ViewController: UIViewController {
             return
         }
         expressionLabel.text! += String(sender.tag)
+		_calculateAnswer()
     }
     @IBAction func EqualButtonPressed(_ sender: UIButton) {
         expressionLabel.text = answerLabel.text
         answerLabel.text = "0"
+		
     }
     @IBAction func PlusButtonPressed(_ sender: UIButton) {
         expressionLabel.text! += "+"
@@ -66,8 +68,13 @@ class ViewController: UIViewController {
     
     
     //MARK: Private Methods
-    private func calculateAnswer() {
-        
+    private func _calculateAnswer() {
+		calcModel.str = expressionLabel.text!
+		if let res = calcModel.result {
+			answerLabel.text = String(res)
+		} else {
+			answerLabel.text = "NA"
+		}
     }
     
     
