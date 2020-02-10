@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,7 +15,6 @@
 		75D0FE5423E610F4009A65A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75D0FE5223E610F4009A65A0 /* LaunchScreen.storyboard */; };
 		75D0FE5F23E610F5009A65A0 /* CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D0FE5E23E610F5009A65A0 /* CalculatorTests.swift */; };
 		75D0FE6A23E617EB009A65A0 /* RoundedButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D0FE6923E617EB009A65A0 /* RoundedButtons.swift */; };
-		75F4B4D523F125E9000DEACC /* Expression in Frameworks */ = {isa = PBXBuildFile; productRef = 75F4B4D423F125E9000DEACC /* Expression */; };
 		75F5529F23E8B10F00DF2E52 /* Calculations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F5529E23E8B10F00DF2E52 /* Calculations.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,7 +49,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75F4B4D523F125E9000DEACC /* Expression in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,10 +85,12 @@
 			children = (
 				75D0FE4723E610EF009A65A0 /* AppDelegate.swift */,
 				75D0FE4923E610EF009A65A0 /* SceneDelegate.swift */,
-				75F4B4D623F12BB3000DEACC /* Model and VC */,
-				75F4B4D823F12E1B000DEACC /* Storyboards */,
-				75F4B4D723F12E0A000DEACC /* UI Elements */,
+				75D0FE4B23E610EF009A65A0 /* ViewController.swift */,
+				75D0FE4D23E610EF009A65A0 /* Main.storyboard */,
+				75D0FE6923E617EB009A65A0 /* RoundedButtons.swift */,
+				75F5529E23E8B10F00DF2E52 /* Calculations.swift */,
 				75D0FE5023E610F4009A65A0 /* Assets.xcassets */,
+				75D0FE5223E610F4009A65A0 /* LaunchScreen.storyboard */,
 				75D0FE5523E610F4009A65A0 /* Info.plist */,
 			);
 			path = Calculator;
@@ -103,32 +103,6 @@
 				75D0FE6023E610F5009A65A0 /* Info.plist */,
 			);
 			path = CalculatorTests;
-			sourceTree = "<group>";
-		};
-		75F4B4D623F12BB3000DEACC /* Model and VC */ = {
-			isa = PBXGroup;
-			children = (
-				75D0FE4B23E610EF009A65A0 /* ViewController.swift */,
-				75F5529E23E8B10F00DF2E52 /* Calculations.swift */,
-			);
-			path = "Model and VC";
-			sourceTree = "<group>";
-		};
-		75F4B4D723F12E0A000DEACC /* UI Elements */ = {
-			isa = PBXGroup;
-			children = (
-				75D0FE6923E617EB009A65A0 /* RoundedButtons.swift */,
-			);
-			path = "UI Elements";
-			sourceTree = "<group>";
-		};
-		75F4B4D823F12E1B000DEACC /* Storyboards */ = {
-			isa = PBXGroup;
-			children = (
-				75D0FE4D23E610EF009A65A0 /* Main.storyboard */,
-				75D0FE5223E610F4009A65A0 /* LaunchScreen.storyboard */,
-			);
-			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,9 +121,6 @@
 			dependencies = (
 			);
 			name = Calculator;
-			packageProductDependencies = (
-				75F4B4D423F125E9000DEACC /* Expression */,
-			);
 			productName = Calculator;
 			productReference = 75D0FE4423E610EF009A65A0 /* Calculator.app */;
 			productType = "com.apple.product-type.application";
@@ -200,9 +171,6 @@
 				Base,
 			);
 			mainGroup = 75D0FE3B23E610EF009A65A0;
-			packageReferences = (
-				75F4B4D323F125E9000DEACC /* XCRemoteSwiftPackageReference "Expression" */,
-			);
 			productRefGroup = 75D0FE4523E610EF009A65A0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -505,25 +473,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		75F4B4D323F125E9000DEACC /* XCRemoteSwiftPackageReference "Expression" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/nicklockwood/Expression";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.13.2;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		75F4B4D423F125E9000DEACC /* Expression */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 75F4B4D323F125E9000DEACC /* XCRemoteSwiftPackageReference "Expression" */;
-			productName = Expression;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 75D0FE3C23E610EF009A65A0 /* Project object */;
 }
