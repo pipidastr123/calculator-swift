@@ -7,13 +7,17 @@
 //
 
 import Foundation
+import Expression
 
 class Calculations {
     
     //MARK: Properties
-    var pos = -1
-    var ch = 0
-    var str: String
+	var result: Float?
+	var str: String {
+		didSet {
+			_calc()
+		}
+	}
     
     
     //MARK: Init
@@ -25,8 +29,12 @@ class Calculations {
     //MARK: Public Methods
     
     //MARK: Private Nethods
-    private func nextChar() {
-        pos += 1
-        ch = pos < self.str.count ? 3 : -1
-    }
+	private func _calc() {
+		let exp = Expression(str)
+		do {
+			try result = Float(exp.evaluate())
+		} catch {
+			result = nil
+		}
+	}
 }
