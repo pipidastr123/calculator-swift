@@ -13,7 +13,7 @@ import Expression
 class CalculatorTests: XCTestCase {
 
 	func testCalc() {
-		let str = "(14+8)*2"
+		let str = "-((14+8)*2)"
 		let exp = Expression(str)
 		var res: Double
 		do {
@@ -21,7 +21,20 @@ class CalculatorTests: XCTestCase {
 		} catch {
 			return
 		}
-		XCTAssert(res == 44)
+		XCTAssert(res == -44)
+	}
+	
+	func plusMinusTest() {
+		var str = "4-2"
+		str = "-(" + str + ")"
+		let exp = Expression(str)
+		var res: Double
+		do {
+			res = try exp.evaluate()
+		} catch {
+			return
+		}
+		XCTAssert(res == -2)
 	}
 
 }

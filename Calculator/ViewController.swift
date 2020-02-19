@@ -42,10 +42,12 @@ class ViewController: UIViewController {
     }
     @IBAction func EqualButtonPressed(_ sender: UIButton) {
         expressionLabel.text = answerLabel.text
+		expStr = answerLabel.text ?? ""
         answerLabel.text = "0"
     }
     @IBAction func PlusButtonPressed(_ sender: UIButton) {
         expressionLabel.text! += "+"
+		expStr += "+"
 		answerLabel.text! = ""
     }
     @IBAction func MinusButtonPressed(_ sender: UIButton) {
@@ -72,6 +74,8 @@ class ViewController: UIViewController {
     }
     @IBAction func PlusMinusButtonPressed(_ sender: UIButton) {
 		expressionLabel.text! = "-(" + expressionLabel.text! + ")"
+		expStr = "-(" + expStr + ")"
+		calculateAnswer()
     }
     @IBAction func ResetButtonPressed(_ sender: UIButton) {
         expressionLabel.text! = "0"
@@ -80,13 +84,13 @@ class ViewController: UIViewController {
     @IBAction func commaButtonPressed(_ sender: UIButton) {
         if expressionLabel.text?.last != "," {
             expressionLabel.text! += ","
-			expStr += ","
+			expStr += "."
         }
     }
 	@IBAction func ExpLabelSwipeRightAction(_ sender: UISwipeGestureRecognizer) {
 		expressionLabel.text?.removeLast()
 		expStr.removeLast()
-		
+		calculateAnswer()
 	}
 	
     
@@ -103,6 +107,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+		expressionLabel.adjustsFontSizeToFitWidth = true
+		expressionLabel.minimumScaleFactor = 0.3
     }
 	
 
