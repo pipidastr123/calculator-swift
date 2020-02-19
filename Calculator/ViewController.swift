@@ -18,6 +18,8 @@ class ViewController: UIViewController {
     }
     var calcModel = Calculations("")
 	var expStr = ""
+	
+	let mathLettersMap = ["×" : "*", "÷" : "/", "+" : "+", "-" : "-"]
     
     
     //MARK: Outlets
@@ -45,26 +47,12 @@ class ViewController: UIViewController {
 		expStr = answerLabel.text ?? ""
         answerLabel.text = "0"
     }
-    @IBAction func PlusButtonPressed(_ sender: UIButton) {
-        expressionLabel.text! += "+"
-		expStr += "+"
-		answerLabel.text! = ""
-    }
-    @IBAction func MinusButtonPressed(_ sender: UIButton) {
-        expressionLabel.text! += "-"
-		expStr += "-"
-		answerLabel.text! = ""
-    }
-    @IBAction func MultiplicateButtonPressed(_ sender: UIButton) {
-        expressionLabel.text! += "×"
-		expStr += "*"
-		answerLabel.text! = ""
-    }
-    @IBAction func DivideButtonPressed(_ sender: UIButton) {
-        expressionLabel.text! += "÷"
-		expStr += "/"
-		answerLabel.text! = ""
-    }
+	
+	@IBAction func MathematicalButtonPressed(_ sender: UIButton) {
+		addMathSymbol(letter: sender.title(for: .normal))
+	}
+	
+	
     @IBAction func DeleteButtonPressed(_ sender: UIButton) {
 		if !expStr.isEmpty && !expressionLabel.text!.isEmpty {
 			expressionLabel.text!.removeLast()
@@ -79,6 +67,7 @@ class ViewController: UIViewController {
     }
     @IBAction func ResetButtonPressed(_ sender: UIButton) {
         expressionLabel.text! = "0"
+		expStr = ""
         answerLabel.text! = "0"
     }
     @IBAction func commaButtonPressed(_ sender: UIButton) {
@@ -87,11 +76,6 @@ class ViewController: UIViewController {
 			expStr += "."
         }
     }
-	@IBAction func ExpLabelSwipeRightAction(_ sender: UISwipeGestureRecognizer) {
-		expressionLabel.text?.removeLast()
-		expStr.removeLast()
-		calculateAnswer()
-	}
 	
     
     //MARK: Private Methods
@@ -103,6 +87,13 @@ class ViewController: UIViewController {
 			answerLabel.text = "NA"
 		}
     }
+	
+	private func addMathSymbol(letter: String?) {
+		guard let letter = letter else { return }
+		expressionLabel.text! += letter
+		expStr += mathLettersMap[letter] ?? ""
+		answerLabel.text! = ""
+	}
     
     
     override func viewDidLoad() {

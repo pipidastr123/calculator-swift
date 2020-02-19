@@ -37,7 +37,7 @@
                                                                 <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                                <real key="value" value="2"/>
+                                                                <real key="value" value="4"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                 <real key="value" value="42"/>
@@ -80,7 +80,7 @@
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="DivideButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tdD-2t-Noe"/>
+                                                            <action selector="MathematicalButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UOU-6i-p08"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -137,7 +137,7 @@
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="MultiplicateButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YFM-Ug-ZOl"/>
+                                                            <action selector="MathematicalButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ulJ-7O-AUn"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -194,7 +194,7 @@
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="MinusButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6EK-op-j8J"/>
+                                                            <action selector="MathematicalButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rdv-hh-k5m"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -251,7 +251,7 @@
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="PlusButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iEu-og-QC1"/>
+                                                            <action selector="MathematicalButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gyk-DF-NYs"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -354,9 +354,6 @@
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="90"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="8h0-pA-2s9" appends="YES" id="8aw-CA-AVW"/>
-                                        </connections>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AYO-kL-apn">
                                         <rect key="frame" x="20" y="184" width="335" height="48"/>
@@ -397,11 +394,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="left" id="8h0-pA-2s9">
-                    <connections>
-                        <action selector="ExpLabelSwipeRightAction:" destination="BYZ-38-t0r" id="qQh-cw-WmQ"/>
-                    </connections>
-                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="138.40000000000001" y="117.48768472906404"/>
         </scene>
