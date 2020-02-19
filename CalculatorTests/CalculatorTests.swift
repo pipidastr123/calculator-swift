@@ -12,7 +12,7 @@ import Expression
 
 class CalculatorTests: XCTestCase {
 
-	func testCalc() {
+	func calcTest() {
 		let str = "-((14+8)*2)"
 		let exp = Expression(str)
 		var res: Double
