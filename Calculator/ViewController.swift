@@ -8,6 +8,8 @@
 
 import UIKit
 
+//TODO: replace expr label with text field
+
 class ViewController: UIViewController {
     
     //MARK: Properties
@@ -15,6 +17,7 @@ class ViewController: UIViewController {
         return .lightContent
     }
     var calcModel = Calculations("")
+	var expStr = ""
     
     
     //MARK: Outlets
@@ -29,9 +32,11 @@ class ViewController: UIViewController {
                 return
             }
             expressionLabel.text = String(sender.tag)
+			expStr = String(sender.tag)
             return
         }
         expressionLabel.text! += String(sender.tag)
+		expStr += String(sender.tag)
 		calculateAnswer()
 		
     }
@@ -41,20 +46,32 @@ class ViewController: UIViewController {
     }
     @IBAction func PlusButtonPressed(_ sender: UIButton) {
         expressionLabel.text! += "+"
+		answerLabel.text! = ""
     }
     @IBAction func MinusButtonPressed(_ sender: UIButton) {
         expressionLabel.text! += "-"
+		expStr += "-"
+		answerLabel.text! = ""
     }
     @IBAction func MultiplicateButtonPressed(_ sender: UIButton) {
         expressionLabel.text! += "×"
+		expStr += "*"
+		answerLabel.text! = ""
     }
     @IBAction func DivideButtonPressed(_ sender: UIButton) {
         expressionLabel.text! += "÷"
+		expStr += "/"
+		answerLabel.text! = ""
     }
-    @IBAction func PercentButtonPressed(_ sender: UIButton) {
+    @IBAction func DeleteButtonPressed(_ sender: UIButton) {
+		if !expStr.isEmpty && !expressionLabel.text!.isEmpty {
+			expressionLabel.text!.removeLast()
+			expStr.removeLast()
+			calculateAnswer()
+		}
     }
     @IBAction func PlusMinusButtonPressed(_ sender: UIButton) {
-        
+		expressionLabel.text! = "-(" + expressionLabel.text! + ")"
     }
     @IBAction func ResetButtonPressed(_ sender: UIButton) {
         expressionLabel.text! = "0"
@@ -63,13 +80,19 @@ class ViewController: UIViewController {
     @IBAction func commaButtonPressed(_ sender: UIButton) {
         if expressionLabel.text?.last != "," {
             expressionLabel.text! += ","
+			expStr += ","
         }
     }
-    
+	@IBAction func ExpLabelSwipeRightAction(_ sender: UISwipeGestureRecognizer) {
+		expressionLabel.text?.removeLast()
+		expStr.removeLast()
+		
+	}
+	
     
     //MARK: Private Methods
     private func calculateAnswer() {
-		calcModel.str = expressionLabel.text ?? ""
+		calcModel.str = expStr
 		if let res = calcModel.result {
 			answerLabel.text = String(res)
 		} else {
@@ -81,6 +104,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+	
 
 
 }
